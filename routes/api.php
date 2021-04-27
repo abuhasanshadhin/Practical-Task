@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\DeveloperController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/get-developers', [DeveloperController::class, 'getDevelopers']);
+Route::post('/add-developer', [DeveloperController::class, 'addDeveloper']);
+Route::put('/update-developer', [DeveloperController::class, 'updateDeveloper']);
+Route::delete('/delete-developer/{id}', [DeveloperController::class, 'deleteDeveloper']);
