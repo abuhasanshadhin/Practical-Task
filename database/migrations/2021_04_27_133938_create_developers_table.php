@@ -15,6 +15,12 @@ class CreateDevelopersTable extends Migration
     {
         Schema::create('developers', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 70);
+            $table->string('email', 100);
+            $table->string('image', 255)->nullable();
+            $table->enum('gender', ['male', 'female']);
+            $table->text('skills');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
