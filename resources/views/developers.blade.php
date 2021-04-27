@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="container my-3">
+    <div id="app" class="container my-3">
         {{-- form --}}
         <div class="row justify-content-center mb-3">
             <div class="col-md-6">
